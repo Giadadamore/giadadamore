@@ -18,30 +18,23 @@
       text-align: center;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-around;
-      background-color: #2c213b; /* Darker purple navigation */
-      padding: 10px;
-    }
-
     section {
       padding: 20px;
     }
 
-      footer {
+    footer {
       background-color: ##ffffff; /* White background */
       color: #2c213b; /* Darker purple text */
       padding: 10px;
       text-align: center;
     }
 
-    .tile {
-      background-color: #483d77; /* Dark purple tile background */
-      padding: 20px;
+    .file {
+      background-color: #483d77; /* Dark purple file background */
+      padding: 10px;
       margin: 10px;
       text-align: center;
-      cursor: pointer;
+      border-radius: 5px;
     }
 
     a {
@@ -56,36 +49,26 @@
 </head>
 <body>
   <header>
-    <h1>That's the right place to view my curriculum</h1>
+    <h1>Now is curriculum time:</h1>
+    <h2>I do know we all love the more fun things but I left a small part of my application for my curriculum</h2> 
+    <h3>Of course you don't have to read it if you felt impressed enough with my amazing presentation video</h3>
+    <h4>You will have the chance to preview it or even download it, if you fancy ... </h4>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="documents.html">Documents</a>
-    <a href="video.html">Video</a>
-  </nav>
-
-  <section id="home">
-    <h2>Welcome to My Website!</h2>
-    <div class="tile" onclick="location.href='#documents'">
-      <h3>Documents</h3>
-      <!-- Clicking on this tile will take you to the Documents page -->
+  <section>
+    <div class="file">
+      <h3>Document 1</h3>
+      <p>Description of Document 1</p>
+      <a href="documents/document1.pdf" download>Download Document</a>
     </div>
-  </section>
 
-  <section id="documents" style="display: none;">
-    <h2>Documents Page</h2>
-    <div class="tile" onclick="location.href='#postPdf'">
-      <h3>Post a PDF</h3>
-      <!-- Clicking on this tile will take you to the Post PDF page -->
+    <div class="file">
+      <h3>Document 2</h3>
+      <p>Description of Document 2</p>
+      <a href="documents/document2.docx" download>Download Document</a>
     </div>
-  </section>
 
-  <section id="postPdf" style="display: none;">
-    <h2>Post PDF</h2>
-    <!-- Add your PDF file link here -->
-    <p><a href="your_document.pdf" target="_blank">View and Download PDF</a></p>
-    <a href="#documents">Back to Documents Page</a>
+    <!-- Add more file entries as needed -->
   </section>
 
   <footer>
