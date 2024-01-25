@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your True/False Quiz</title>
+  <style>
+    body {
+      background-color: #6b5b95; /* Purple background */
+      color: #ffffff; /* White text */
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #2c213b; /* Darker purple header */
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #2c213b; /* Darker purple footer */
+      padding: 10px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #483d77; /* Dark purple button background */
+      color: #ffffff; /* White button text */
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #7d71a0; /* Lighter purple on hover */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your True/False Quiz</h1>
+  </header>
+
+  <section>
+    <form id="quizForm">
+      <label>
+        1. The sky is blue.
+        <input type="radio" name="q1" value="true"> True
+        <input type="radio" name="q1" value="false"> False
+      </label>
+
+      <label>
+        2. The Earth is flat.
+        <input type="radio" name="q2" value="true"> True
+        <input type="radio" name="q2" value="false"> False
+      </label>
+
+      <label>
+        3. Water boils at 100 degrees Celsius.
+        <input type="radio" name="q3" value="true"> True
+        <input type="radio" name="q3" value="false"> False
+      </label>
+
+      <label>
+        4. The capital of France is Berlin.
+        <input type="radio" name="q4" value="true"> True
+        <input type="radio" name="q4" value="false"> False
+      </label>
+
+      <label>
+        5. The moon is made of cheese.
+        <input type="radio" name="q5" value="true"> True
+        <input type="radio" name="q5" value="false"> False
+      </label>
+
+      <input type="submit" value="Submit Quiz">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Giada D'Amore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("quizForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      evaluateQuiz();
+    });
+
+    function evaluateQuiz() {
+      // Replace this with your logic to evaluate the quiz
+      // Example: Check answers and display a score
+      var answers = {
+        q1: "true",
+        q2: "false",
+        q3: "true",
+        q4: "false",
+        q5: "false"
+      };
+
+      var userAnswers = {};
+      var formData = new FormData(document.getElementById("quizForm"));
+
+      for (var pair of formData.entries()) {
+        userAnswers[pair[0]] = pair[1];
+      }
+
+      var score = 0;
+      for (var question in userAnswers) {
+        if (userAnswers[question] === answers[question]) {
+          score++;
+        }
+      }
+
+      alert("Your score: " + score + " out of 5");
+    }
+  </script>
+</body>
+</html>
