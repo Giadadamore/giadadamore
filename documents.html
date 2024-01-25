@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Purple Documents</title>
+  <style>
+    body {
+      background-color: #6b5b95; /* Purple background */
+      color: #ffffff; /* White text */
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #2c213b; /* Darker purple header */
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #2c213b; /* Darker purple navigation */
+      padding: 10px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #2c213b; /* Darker purple footer */
+      padding: 10px;
+      text-align: center;
+    }
+
+    .tile {
+      background-color: #483d77; /* Dark purple tile background */
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    a {
+      color: #ffffff; /* White links */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Purple Documents</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#documents">Documents</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Your Purple Website!</h2>
+    <div class="tile" onclick="location.href='#documents'">
+      <h3>Documents</h3>
+      <!-- Clicking on this tile will take you to the Documents page -->
+    </div>
+  </section>
+
+  <section id="documents" style="display: none;">
+    <h2>Documents Page</h2>
+    <div class="tile" onclick="location.href='#postPdf'">
+      <h3>Post a PDF</h3>
+      <!-- Clicking on this tile will take you to the Post PDF page -->
+    </div>
+    <a href="#home">Back to Home</a>
+  </section>
+
+  <section id="postPdf" style="display: none;">
+    <h2>Post PDF</h2>
+    <!-- Add your PDF file link here -->
+    <p><a href="your_document.pdf" target="_blank">View and Download PDF</a></p>
+    <a href="#documents">Back to Documents Page</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Giada D'Amore. All rights reserved.</p>
+  </footer>
+</body>
+</html>
