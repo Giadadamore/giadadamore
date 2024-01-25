@@ -3,15 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website</title>
+  <title>Your Purple Website</title>
+  <style>
+    body {
+      background-color: #6b5b95; /* Purple background */
+      color: #ffffff; /* White text */
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #2c213b; /* Darker purple header */
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #2c213b; /* Darker purple navigation */
+      padding: 10px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #2c213b; /* Darker purple footer */
+      padding: 10px;
+      text-align: center;
+    }
+
+    .tile {
+      background-color: #483d77; /* Dark purple tile background */
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    a {
+      color: #ffffff; /* White links */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Personal Website!</h1>
+  <header>
+    <h1>Your Purple Website</h1>
+  </header>
 
-  <h2>File Upload</h2>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" accept=".pdf, .doc, .docx">
-    <button type="submit">Upload File</button>
-  </form>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#documents">Documents</a>
+    <a href="#video">Video</a>
+    <a href="#text">Text</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Your Purple Website!</h2>
+    <div class="tile" onclick="location.href='#documents'">
+      <h3>Documents</h3>
+      <!-- Add your document content or link here -->
+    </div>
+
+    <div class="tile" onclick="location.href='#video'">
+      <h3>Video</h3>
+      <!-- Add your video content or link here -->
+    </div>
+
+    <div class="tile" onclick="location.href='#text'">
+      <h3>Text</h3>
+      <!-- Add your text content here -->
+    </div>
+  </section>
+
+  <section id="documents" style="display: none;">
+    <h2>Documents</h2>
+    <!-- Add your document content here -->
+    <a href="#home">Back to Home</a>
+  </section>
+
+  <section id="video" style="display: none;">
+    <h2>Video</h2>
+    <!-- Add your video content here -->
+    <a href="#home">Back to Home</a>
+  </section>
+
+  <section id="text" style="display: none;">
+    <h2>Text</h2>
+    <!-- Add your text content here -->
+    <a href="#home">Back to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Your Purple Website. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+
